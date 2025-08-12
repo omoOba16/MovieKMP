@@ -43,6 +43,13 @@ This project uses The Movie Database (TMDB) API. To run the app, you need to obt
 
 Once you have your Access Token:
 
+### Android
+
 1.  Create a `local.properties` file in the root of your project (if it doesn't already exist).
-2.  Add your TMDB Access Token to the `local.properties` file:
+2.  Add your TMDB Access Token to the `local.properties` file
+
+### iOS
+
+1.  Create a `Secrets.plist` file (if it doesn't already exist).
+2.  Add your TMDB Access Token
     
