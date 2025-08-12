@@ -1,0 +1,14 @@
+package com.example.moviekmp.data.repository
+
+import com.example.moviekmp.core.data.dto.shows.ShowResponseDto
+import com.example.moviekmp.core.domain.DataError
+import com.example.moviekmp.core.domain.NetworkResult
+import com.example.moviekmp.domain.model.Show
+
+interface ShowRepository {
+    suspend fun getTrendingShows(timeWindow: String): NetworkResult<List<Show>?, DataError.Remote>
+    suspend fun getAiringToday(page:Int?): NetworkResult<ShowResponseDto?, DataError.Remote>
+    suspend fun getOnTheAir(page:Int?): NetworkResult<ShowResponseDto?, DataError.Remote>
+    suspend fun getPopularShows(page:Int?): NetworkResult<ShowResponseDto?, DataError.Remote>
+    suspend fun getTopRatedShows(page:Int?): NetworkResult<ShowResponseDto?, DataError.Remote>
+}
